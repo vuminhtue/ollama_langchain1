@@ -10,7 +10,7 @@ temperature = st.sidebar.slider("Temperature",0.0,1.0,0.5,0.01)
 st.write(llm_name)
 st.image("./pony.jpeg")
 st.title("AskPeruna")
-llm = ChatOllama(base_url="http://ollama-container:11434", model=llm_name, temperature=temperature)
+llm = ChatOllama(base_url="http://localhost:11434", model=llm_name, temperature=temperature)
 
 def my_chatbot(freeform_text):
     prompt = PromptTemplate(
